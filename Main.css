@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --main-color: #292929;
+  --secondry-color: #516dff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 10px;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  font-family: monospace;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: 0.5s ease-out;
+  border-radius: 5px;
+}
+nav ul li a:hover {
+  color: var(--secondry-color);
+  background: white;
+}
+nav ul li {
+  list-style: none;
+  margin: 0px 5px;
+}
+.logo svg {
+  height: 80px;
+}
+.version {
+  font-size: 20px;
+  padding: 10px;
+  color: var(--main-color);
+  background: rgb(216, 216, 216);
+  border-radius: 5px;
+}
+main {
+  height: 80vh;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+main p {
+  font-size: 20px;
+  text-align: justify;
+  color: var(--main-color);
+  position: absolute;
+  top: 45%;
+}
+main img {
+  height: 60vh;
+  margin: 10px;
+}
+main section {
+  margin: 0px 15px;
+  position: relative;
+  height: 100%;
+}
+main button {
+  position: absolute;
+  bottom: 10%;
+  padding: 10px;
+  font-size: 25px;
+  background: var(--secondry-color);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  padding-top: 10%;
+  text-align: start;
+}
+
+#setup {
+  width: 65vw;
+  margin: 5% auto;
+}
+.flex {
+  display: flex;
+  margin-top: 5%;
+}
+.heading {
+  text-align: center;
+  font-weight: 200;
+  font-size: 4rem;
+  padding: 20px;
+}
+.tasks p {
+  margin-top: 26px;
+  padding: 20px 30px;
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+.numbering {
+  position: relative;
+  width: min-content;
+}
+#n1 {
+  position: absolute;
+  top: 50px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
+}
+#n2 {
+  position: absolute;
+  top: 138px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
+}
+#n3 {
+  position: absolute;
+  top: 228px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
+}
+#n4 {
+  position: absolute;
+  top: 315px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
+}
+footer {
+  background: var(--secondry-color);
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  main img {
+    height: 25vh;
+  }
+  main p {
+    font-size: 17px;
+  }
+  main h1{
+      font-size: 2.4rem;
+  }
+  .tasks >*{
+      font-size: 15px !important;
+      margin-top: 30px !important;
+  }
+}
+@media (min-height: 730px) {
+    main{
+        height: 70vh;
+    }
+    main h1{
+        padding-top: 15vh;
+    }
+    main button{
+      bottom: 10% !important;
+    }
+}
+@media (max-width:750px){
+    main img{
+        display: none;
+    }
+    main h1{
+        font-size: 2rem;
+        padding-top: 10vh;
+    }
+    main button{
+        font-size: 18px;
+        bottom: 5%;
+    }
+    .version{
+        display: none;
+    }
+    nav ul li {
+        margin: 0;
+    }
+    nav ul li a{
+        font-size: 12px;
+        padding: 20px 10px;
+    }
+    .logo svg{
+        width: 8vh !important;
+    }
+    .logo{
+        height: min-content;
+    }
+    #setup{
+        width: 95%;
+    }
+    .tasks :nth-child(2){
+        padding: 0px 30px;
+    }
+    .tasks :nth-child(4){
+        padding: 30px 30px;
+    }
+    nav ul li a:hover{
+        background: transparent;
+        color: white;
+    }
+    #setup h1{
+        font-size: 2.6rem;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+
+}
+
+@media (max-width:415px){
+  .tasks :nth-child(4){
+    padding: 8px 30px;
+  }
+}
+
+@media (min-height:1000px){
+  main{
+    height: 50vh;
+  }
+  main button{
+    bottom: 15% !important;
+  }
+  .tasks :nth-child(2){
+    padding: 20px 30px;
+}
+}
